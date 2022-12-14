@@ -114,6 +114,11 @@ header .navbar a:hover{
     text-align: center;
 }
 
+.dishes .box-container .box img{
+    height:17rem;
+    margin:1rem;
+}
+
 
 
 
