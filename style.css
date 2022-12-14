@@ -110,6 +110,10 @@ header .navbar a:hover{
    }
 }
 
+section{
+    padding:2rem;
+   }
+
 @media(max-width:768px){
 
 }
@@ -133,6 +137,11 @@ header .navbar a{
     margin:1rem;
     font-size: 2rem;
     background: #eee;
+}
+
+.home .home-slider .slide .content h3{
+    color:var(--black);
+    font-size: 5rem;
 }
 
 
@@ -178,4 +187,8 @@ header .navbar a{
     font-size: 2.2rem;
     padding:.5rem 0;
     line-height: 1.5;
+}
+
+.swiper-pagination-bullet-active{
+    background:var(--green);
 }
