@@ -294,6 +294,11 @@ header .navbar a:hover{
     width:100%;
  }
 
+ .order form .inputBox .input input:focus,
+ .order form .inputBox .input textarea:focus{
+    border:.1rem solid var(--green);
+ }
+
  .order form .inputBox .input textarea{
     height:20rem;
     resize: none;
@@ -302,6 +307,27 @@ header .navbar a:hover{
  .order form .btn{
     margin-top: 0;
  }
+
+ .footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.5rem;
+ }
+
+ .footer .box-container .box h3{
+     padding:.5rem 0;
+     font-size: 2.5rem;
+     color:var(--black);
+ }
+
+ .footer .box-container .box a{
+    display:block;
+    padding:.5rem 0;
+    font-size: 2.5rem;
+    color:var(--black);
+}
+
+ 
 
 
 
