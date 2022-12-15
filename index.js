@@ -1,3 +1,40 @@
+// JavaScript code for accessing JSON
+// Function for fetching restaurant data from the mock API
+function getRestaurantData() {
+  // Send a GET request to the API endpoint
+  fetch("http://localhost:3000/restaurants")
+    .then(function(response) {
+      // Parse the response as JSON
+      return response.json();
+    })
+    .then(function(data) {
+      // Do something with the data (e.g. display on website)
+      displayRestaurantData(data);
+    });
+}
+
+// Function for displaying the restaurant data on the website
+function displayRestaurantData(data) {
+  // Get the element where the data will be displayed
+  const restaurantDataElement = document.getElementById("restaurant-data");
+
+  // Create a list of restaurant information
+  let restaurantDataHtml = "<ul>";
+  data.forEach(function(restaurant) {
+    restaurantDataHtml += `<li>
+      <h3>${restaurant.name}</h3>
+      <p>${restaurant.address}</p>
+      <p>Rating: ${restaurant.rating}</p>
+      <p>Cuisine: ${restaurant.cuisine}</p>
+    </li>`;
+  });
+  restaurantDataHtml += "</ul>";
+
+  // Set the innerHTML of the element to the list of restaurant information
+  restaurantDataElement.innerHTML = restaurantDataHtml;
+}
+
+
 let menu = document.querySelector('.navbar');
 
 menu.onclick = () =>{
@@ -94,3 +131,4 @@ handleWindowResize();
 
 // attach an event listener to the window to handle resizes
 window.addEventListener('resize', handleWindowResize);
+
