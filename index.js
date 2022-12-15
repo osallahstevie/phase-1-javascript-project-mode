@@ -19,3 +19,14 @@ var swiper = new Swiper(".home-slider", {
     loop:true,
     
   });
+
+  var swiper = new Swiper(".home-slider", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 7500,
+      disableOnInteraction: false,
+    },
+    loop:true,
+    
+  });
