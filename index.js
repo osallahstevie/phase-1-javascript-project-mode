@@ -70,30 +70,27 @@ var swiper = new Swiper(".home-slider", {
         },
     },
   });
-  // initialize the Swiper carousel
-var swiper = new Swiper('.home-slider', {
-  // set the carousel to slide automatically
-  autoplay: {
-    delay: 3000,
-  },
-});
+  
+  // get the "Order" section
+var orderSection = document.querySelector('.order');
 
-// create a function to handle the "Order now" button click
-function handleOrderClick(event) {
-  // prevent the default action of the button
-  event.preventDefault();
+// create a function to handle window resizes
+function handleWindowResize() {
+  // get the width of the window
+  var windowWidth = window.innerWidth;
 
-  // get the dish name from the button's data attribute
-  var dish = this.dataset.dish;
-
-  // show a message to the user indicating that the dish was added to the order
-  alert(`${dish} was added to your order!`);
+  // if the window is wider than 768px
+  if (windowWidth > 768) {
+    // set the "Order" section to have two columns
+    orderSection.classList.add('row');
+  } else {
+    // set the "Order" section to have one column
+    orderSection.classList.remove('row');
+  }
 }
 
-// get all the "Order now" buttons on the page
-var orderButtons = document.querySelectorAll('.btn');
+// call the function to set the initial layout of the "Order" section
+handleWindowResize();
 
-// attach an event listener to each button to handle clicks
-orderButtons.forEach(function(button) {
-  button.addEventListener('click', handleOrderClick);
-});
+// attach an event listener to the window to handle resizes
+window.addEventListener('resize', handleWindowResize);

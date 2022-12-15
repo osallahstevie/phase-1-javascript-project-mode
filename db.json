@@ -1,19 +1,15 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
-}
+    "dishes": [
+        {
+            "id": 1,
+            "name": "Spicy Noodles",
+            "description": "Chili oil, hot sauce, or a handful of red pepper flakes would all work perfectly to make your dish as hot as you like it",
+            "image": "img/noodi.jpeg"
+        },
+        {
+            "id": 2,
+            "name": "Fried Chicken",
+            "description": "Crispy fried tasty chicken drums bucket best for family and friends",
+            "image": "img/chicken.jpeg"
+        },
+}],
