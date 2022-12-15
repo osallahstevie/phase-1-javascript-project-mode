@@ -5,6 +5,18 @@ menu.onclick = () =>{
     menu.classList.toggle('active');
 }
 
+let section = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header .navbar a');
+
+window.onscroll = () =>{
+  menu.classList.remove('fa-times');
+  navbar.classList.remove('active');
+}
+
+document.querySelector('#close').onclick = () =>{
+  document.querySelector('#search-form').classList.toggle('active');
+}
+
 var swiper = new Swiper(".home-slider", {
     spaceBetween: 20,
     centeredSlides: true,
