@@ -1,8 +1,7 @@
 // JavaScript code for accessing JSON
-// Function for fetching restaurant data from the mock API
 function getRestaurantData() {
   // Send a GET request to the API endpoint
-  fetch("http://localhost:3000/restaurants")
+  fetch("http://localhost:3000/dishes")
     .then(function(response) {
       // Parse the response as JSON
       return response.json();
